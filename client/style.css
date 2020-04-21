@@ -1,0 +1,14 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+
+@import 'tailwindcss/utilities';
+
+/* Text input */
+/* @import './style/text-input.css'; */
+
+/* Ovveride nprogress color */
+#nprogress {
+  --color-nprogress: #f7fafc !important;
+}

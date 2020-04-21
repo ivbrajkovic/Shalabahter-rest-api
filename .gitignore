@@ -1,0 +1,34 @@
+### remove history from git
+#
+# rm -rf .git
+# git init
+# git add .
+# git commit -m "Initial commit"
+# git remote add origin <github-uri> (https://github.com/ivbrajkovic/baze-2-heroku.git)
+# git push -u --force origin master
+
+# heroku ps:scale web=1 -a vinarija
+# heroku ps:scale web=0
+
+# git add .
+# git commit -m "Add cool face API"
+# git push heroku master
+# heroku open cool
+
+# postgres://ivanbrajkovic:@localhost:5432/pivovara_test
+# heroku pg:push postgres://ivanbrajkovic:@localhost:5432/vinarija DATABASE_URL --app vinarija
+
+# heroku run bash
+# heroku logs --tail
+
+.DS_Store
+# .gitignore
+node_modules/
+# public/javascript/old
+# routes/old/
+# views/old/
+old/
+.env
+.rest
+*_old*
+*.sql

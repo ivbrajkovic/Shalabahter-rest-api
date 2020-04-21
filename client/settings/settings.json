@@ -1,0 +1,12 @@
+{
+  "appName": "shalabahter",
+  "appToken": "token",
+  "urls": {
+    "login": "http://127.0.0.1:3000/api/auth/login",
+    "data": "http://127.0.0.1:3000/api/posts",
+    "me": "http://127.0.0.1:3000/api/auth/me",
+    "insert": "http://127.0.0.1:3000/api/posts",
+    "update": "http://127.0.0.1:3000/api/posts",
+    "delete": "http://127.0.0.1:3000/api/posts"
+  }
+}

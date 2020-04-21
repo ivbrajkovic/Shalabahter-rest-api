@@ -1,0 +1,75 @@
+{
+  "name": "shalabahter-rest-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run server:prod",
+    "client:dev": "webpack-dev-server --env.mode=development --config webpack.config.js --open",
+    "client:build": "cross-env NODE_ENV=production webpack --env.mode=production --config webpack.config.js",
+    "client:analyze": "webpack --env.mode=production --env.analyze --config webpack.config.js",
+    "server:dev": "nodemon -L ./bin/www --trace-warnings",
+    "server:prod": "cross-env NODE_ENV=production node ./bin/www",
+    "build-css": "node-sass -r scss/ -o public/stylesheets/",
+    "build-css-w": "node-sass -w -r scss/ -o public/stylesheets/",
+    "sass": "node-sass -r scss/ -o public/stylesheets/",
+    "sass-min": "node-sass -r scss/ -o public/stylesheets/ --output-style compressed",
+    "sass-w": "node-sass -w -r scss/ -o public/stylesheets/",
+    "uglify": "uglifyjs public/javascripts/index.js -o public/javascripts/min/index.min.js -c drop_console=true"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "api",
+      "routes",
+      "views"
+    ],
+    "delay": "1000"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "morgan": "~1.9.0",
+    "nprogress": "^0.2.0",
+    "pg-monitor": "^1.1.0",
+    "pg-promise": "^8.5.5",
+    "preact": "^10.4.0",
+    "preact-router": "^3.2.1",
+    "pug": "^2.0.4",
+    "sweetalert2": "^9.10.10",
+    "tailwindcss": "^1.2.0",
+    "tailwindcss-elevation": "^0.3.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.2",
+    "dotenv": "^8.2.0",
+    "file-loader": "^6.0.0",
+    "gh-pages": "^2.2.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.1",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@db": "db",
+    "@api": "api",
+    "@routes": "api/routes"
+  }
+}

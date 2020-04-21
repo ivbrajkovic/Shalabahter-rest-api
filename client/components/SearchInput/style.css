@@ -1,0 +1,108 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.root > span {
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+
+.span-default {
+  background-color: #3cefff;
+}
+
+.input-default {
+  width: 6.5em;
+  color: white;
+  background-color: hsl(236, 32%, 26%);
+  padding: 0.35em 0.45em;
+}
+
+.input {
+  padding-left: 0 !important;
+  font-size: inherit;
+  font-family: inherit;
+  transition: background-color 0.3s ease-in-out;
+  /* border: 1px solid transparent; */
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+/* .input::placeholder { */
+  /* color: hsla(0, 0%, 100%, 0.6); */
+  /* color: inherit; */
+/* } */
+
+.bottom,
+.top {
+  height: 1px;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+}
+
+.left,
+.right {
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  transform: scaleY(0);
+}
+
+.bottom {
+  bottom: 0;
+  transform-origin: bottom right;
+}
+
+.input:focus ~ .bottom {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.right {
+  right: 0;
+  transform-origin: top right;
+}
+
+.input:focus ~ .right {
+  transform-origin: bottom right;
+  transform: scaleY(1);
+}
+
+.top {
+  top: 0;
+  transform-origin: top left;
+}
+
+.input:focus ~ .top {
+  transform-origin: top right;
+  transform: scaleX(1);
+}
+
+.left {
+  left: 0;
+  transform-origin: bottom left;
+}
+
+.input:focus ~ .left {
+  transform-origin: top left;
+  transform: scaleY(1);
+}
+
+.icon {
+  --search-input-icon-size: 1.25rem;
+  /* display: block; */
+  width: var(--search-input-icon-size);
+  height: var(--search-input-icon-size);
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  /* color: var(--color-contrast-low); */
+  /* transition: transform 0.2s; */
+}

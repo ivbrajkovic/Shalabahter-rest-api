@@ -19,6 +19,7 @@ module.exports = class AuthController {
    */
   static loginUser = async req => {
     const { user, password } = req.body;
+    console.log('AuthController -> req.body', req.body);
 
     // Check user
     if (user !== process.env.ADMIN_USER)

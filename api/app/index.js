@@ -43,8 +43,13 @@ app.use(express.static(path.join(process.cwd(), 'dist')));
 app.use('/api/auth', auth);
 app.use('/api/posts', posts);
 
+// Redirect on refresh
+app.use('*', (req, res, next) => {
+  res.redirect('/');
+});
+
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   next(createError(404));
 });
 

@@ -12,7 +12,7 @@ export const initialState = {
 
 // Action reducer
 export const reducer = (state, action) => {
-  console.log('reducer -> action', action);
+  // console.log('reducer -> action', action);
 
   switch (action.type) {
     case 'SET_LOGOUT':

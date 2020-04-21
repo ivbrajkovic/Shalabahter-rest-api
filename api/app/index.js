@@ -44,9 +44,9 @@ app.use('/api/auth', auth);
 app.use('/api/posts', posts);
 
 // Redirect on refresh
-app.use('*', (req, res, next) => {
-  res.redirect('/');
-});
+// app.use('*', (req, res, next) => {
+//   res.redirect('/');
+// });
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

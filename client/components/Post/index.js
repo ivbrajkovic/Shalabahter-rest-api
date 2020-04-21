@@ -63,7 +63,7 @@ const Post = ({ data, admin, insertOdgovor, updateOdgovor, deleteOdgovor }) => {
 
   const insertClick = () => {
     insertOdgovor(state);
-    setState({ ...dummy });
+    setState({ id: '', pitanje: '', odgovori: [] });
   };
   const updateClick = () => updateOdgovor(state);
   const deleteClick = () => deleteOdgovor(state.id);

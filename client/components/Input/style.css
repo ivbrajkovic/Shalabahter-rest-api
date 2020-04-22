@@ -15,22 +15,23 @@
 .form-control-label {
   position: absolute;
   /* padding-left: 0.625rem; */
-  top: 0;
+  top: 50%;
   left: 0;
   font-size: 1rem;
   /* color: var(--color-light); */
   pointer-events: none;
   transition: 0.5s;
+  will-change: transform;
+  transform-origin: left;
+  transform: translateY(-50%);
 }
 
 .form-control:focus ~ .form-control-label,
 .form-control:valid ~ .form-control-label {
-  top: -0.625rem;
-  left: 0;
+  /* top: -0.625rem; */
+  /* left: 0; */
   /* color: #4c51bf; */
-  will-change: transform;
-  transform: scale(0.85);
-  transform-origin: left;
+  transform: translateY(-150%) scale(0.85);
 }
 
 .form-control-line {

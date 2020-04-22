@@ -12,3 +12,12 @@
 #nprogress {
   --color-nprogress: #f7fafc !important;
 }
+
+/* IOS Safari reset */
+textarea,
+input[type='text'],
+input[type='button'],
+input[type='submit'] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}

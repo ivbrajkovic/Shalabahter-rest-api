@@ -74,7 +74,7 @@ const Login = () => {
           <Input name='password' type='password' />
           <div className='mt-6 mb-8'>
             <input
-              className='px-4 py-3 text-gray-100 duration-200 bg-teal-500 rounded-none cursor-pointer hover:bg-teal-600'
+              className='px-4 py-3 text-gray-100 duration-200 bg-teal-500 cursor-pointer hover:bg-teal-600'
               type='submit'
               value='Submit'
             />

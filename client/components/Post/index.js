@@ -69,7 +69,7 @@ const Post = ({ data, admin, insertOdgovor, updateOdgovor, deleteOdgovor }) => {
   const updateClick = () => updateOdgovor(state);
   const deleteClick = () => deleteOdgovor(state.id);
 
-  const adminClass = admin ? 'border' : 'resize-none';
+  const adminClass = admin ? 'pl-2 border' : 'resize-none';
 
   return (
     <div className='flex flex-col p-4 bg-white shadow-md sm:shadow-lg'>
@@ -78,6 +78,7 @@ const Post = ({ data, admin, insertOdgovor, updateOdgovor, deleteOdgovor }) => {
         <div className='inline-block text-lg leading-8'>{`${state.id}.`}</div>
         &nbsp;
         <input
+          type='text'
           readonly={!admin}
           className={`flex-1 inline-block h-8 text-lg ${adminClass}`}
           value={state.pitanje}

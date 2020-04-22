@@ -64,25 +64,26 @@ const Post = ({ data, admin, insertOdgovor, updateOdgovor, deleteOdgovor }) => {
   const insertClick = () => {
     insertOdgovor(state);
     setState(dummy());
-// ({ id: 'empty', pitanje: 'empty', odgovori: ['emty'] });
+    // ({ id: 'empty', pitanje: 'empty', odgovori: ['emty'] });
   };
   const updateClick = () => updateOdgovor(state);
   const deleteClick = () => deleteOdgovor(state.id);
 
-  const adminClass = admin ? 'border' : 'resize-none';
+  const adminClass = admin ? 'border' : 'border-none resize-none';
 
   return (
     <div className='flex flex-col p-4 bg-white shadow-md sm:shadow-lg'>
       {/* Header */}
       <div className='flex pb-1 mb-3 border-b'>
-        <div className='inline-block text-lg'>{`${state.id}.`}</div>
+        <div className='inline-block text-lg leading-8'>{`${state.id}.`}</div>
         &nbsp;
-        <input        
+        <input
           readonly={!admin}
-          className={`flex-1 inline-block h-8 text-lg ${adminClass}`}
+          className={`flex-1 inline-block h-8 text-lg rounded-none ${adminClass}`}
           value={state.pitanje}
           onInput={inputPitanje}
-        />      
+          placeholder='Unesite pitanje...'
+        />
       </div>
 
       {/* Body */}
@@ -104,6 +105,7 @@ const Post = ({ data, admin, insertOdgovor, updateOdgovor, deleteOdgovor }) => {
               className={`min-h-full flex-1 mb-2 leading-tight ${adminClass}`}
               value={el}
               onInput={inputOdgovori}
+              placeholder='Unesite odgovor...'
             />
           </div>
         ))}

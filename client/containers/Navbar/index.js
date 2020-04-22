@@ -18,7 +18,7 @@ import Background from '../../components/Background';
 
 // Navbar item style
 const navLink =
-  'py-5 px-6 hover:bg-teal-500 duration-200 cursor-pointer outline-none';
+  'py-4 px-5 sm:py-5 sm:px-6 hover:bg-teal-500 duration-200 cursor-pointer outline-none';
 
 const index = ({ loggedIn, admin }) => {
   const dispatch = useContext(Dispatcher);
@@ -32,12 +32,12 @@ const index = ({ loggedIn, admin }) => {
   };
 
   return (
-    <div className='fixed top-0 z-50 w-full text-lg tracking-wider bg-gray-600 shadow-xl'>
+    <div className='fixed top-0 z-50 w-full tracking-wider bg-gray-600 shadow-xl text-md sm:text-lg'>
       <Background />
 
       <div className='container flex justify-between'>
         <div className='flex items-center'>
-          <a href='/' className='text-2xl'>
+          <a href='/' className='text-xl sm:text-2xl'>
             Shalabahter
           </a>
         </div>

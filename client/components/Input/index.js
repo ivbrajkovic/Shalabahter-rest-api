@@ -12,7 +12,7 @@ const Input = ({ name, type = 'text', autofocus = false }) => {
     <div className='relative my-6'>
       <input
         type={type}
-        className={`text-blue-700 border-b border-gray-400 ${style['form-control']}`}
+        className={`text-blue-700 border-b border-gray-400 rounded-none ${style['form-control']}`}
         name={name}
         autocomplete='off'
         required

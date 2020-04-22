@@ -60,21 +60,21 @@ const Login = () => {
   };
 
   return (
-    <div className='container flex items-center justify-center h-full'>
+    <div className='container flex items-start justify-center h-full sm:items-center'>
       <form
         ref={formRef}
         className='w-full overflow-hidden text-gray-400 bg-white shadow-xl sm:w-8/12 lg:w-1/3'
         onSubmit={onSubmit}
       >
-        <div className='py-4 text-2xl text-center text-gray-100 bg-teal-500'>
+        <div className='py-3 text-xl text-center text-gray-100 bg-teal-500 sm:py-4 sm:text-2xl'>
           <h2>Login</h2>
         </div>
         <div className='px-10'>
-          <Input name='name' autofocus={true} />
+          <Input name='name' />
           <Input name='password' type='password' />
-          <div className='mt-8 mb-10'>
+          <div className='mt-6 mb-8'>
             <input
-              className='px-4 py-3 text-gray-100 duration-200 bg-teal-500 cursor-pointer hover:bg-teal-600'
+              className='px-4 py-3 text-gray-100 duration-200 bg-teal-500 rounded-none cursor-pointer hover:bg-teal-600'
               type='submit'
               value='Submit'
             />

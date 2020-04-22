@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run server:prod",
+    "start": "npm run client:build && npm run server:prod",
     "client:dev": "webpack-dev-server --env.mode=development --config webpack.config.js --open",
     "client:build": "cross-env NODE_ENV=production webpack --env.mode=production --config webpack.config.js",
     "client:analyze": "webpack --env.mode=production --env.analyze --config webpack.config.js",

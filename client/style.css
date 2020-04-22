@@ -16,8 +16,10 @@
 /* IOS Safari reset */
 textarea,
 input[type='text'],
+input[type='password'],
 input[type='button'],
 input[type='submit'] {
   -webkit-appearance: none;
   border-radius: 0;
+  border: none;
 }

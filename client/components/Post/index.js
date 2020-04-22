@@ -12,11 +12,11 @@ import Textarea from '../Textarea';
 const btn = 'px-4 py-3 text-gray-100 duration-200 cursor-pointer';
 
 // Dummy data
-const dummy = { id: '', pitanje: '', odgovori: [] };
+const dummy = () => ({ id: '', pitanje: '', odgovori: [] });
 
 const Post = ({ data, admin, insertOdgovor, updateOdgovor, deleteOdgovor }) => {
   const firstRunRef = useRef(true);
-  const [state, setState] = useState(data || dummy);
+  const [state, setState] = useState(data || dummy());
 
   // Refresh DOM on new data
   useEffect(() => {
@@ -63,7 +63,8 @@ const Post = ({ data, admin, insertOdgovor, updateOdgovor, deleteOdgovor }) => {
 
   const insertClick = () => {
     insertOdgovor(state);
-    setState({ id: 'empty', pitanje: 'empty', odgovori: ['emty'] });
+    setState(dummy());
+// ({ id: 'empty', pitanje: 'empty', odgovori: ['emty'] });
   };
   const updateClick = () => updateOdgovor(state);
   const deleteClick = () => deleteOdgovor(state.id);
@@ -76,15 +77,12 @@ const Post = ({ data, admin, insertOdgovor, updateOdgovor, deleteOdgovor }) => {
       <div className='flex pb-1 mb-3 border-b'>
         <div className='inline-block text-lg'>{`${state.id}.`}</div>
         &nbsp;
-        <Textarea
-          rows='1'
+        <input        
           readonly={!admin}
           className={`flex-1 inline-block h-8 text-lg ${adminClass}`}
           value={state.pitanje}
           onInput={inputPitanje}
-        >
-          {state.pitanje}
-        </Textarea>
+        />      
       </div>
 
       {/* Body */}

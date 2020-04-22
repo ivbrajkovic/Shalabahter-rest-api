@@ -14,12 +14,19 @@
 }
 
 /* IOS Safari reset */
+
 textarea,
 input[type='text'],
 input[type='password'],
 input[type='button'],
 input[type='submit'] {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border-radius: 0;
-  /* border: none; */
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  background: none;
 }

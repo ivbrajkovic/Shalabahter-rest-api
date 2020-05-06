@@ -4,13 +4,18 @@
 
 import { h } from 'preact';
 import { useRef, useEffect } from 'preact/hooks';
+import { memo } from 'preact/compat';
 
 const setSize = ta => {
+  // console.log('textarea -> setSize');
+
   ta.style.height = '';
   ta.style.height = Math.min(ta.scrollHeight) + 2 + 'px';
 };
 
 const Textarea = props => {
+  // console.log('textarea -> component');
+
   const textareaRef = useRef();
 
   const onInput = e => {
@@ -34,4 +39,4 @@ const Textarea = props => {
   );
 };
 
-export default Textarea;
+export default memo(Textarea);

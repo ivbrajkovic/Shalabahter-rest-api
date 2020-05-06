@@ -13,7 +13,7 @@ const SearchInput = props => {
 
   // Add comopnent style
   if (props.class) props.class += ' ' + style['input'];
-  if (props.className) props.className += ' ' + style['input'];
+  // if (props.className) props.className += ' ' + style['input'];
   else props.className = style['input-default'] + ' ' + style['input'];
 
   // (([^\s]+)?shad.[^\s]+)

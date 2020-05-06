@@ -41,8 +41,8 @@ module.exports = class DataController {
     @param {*} data Array of data to update
     */
   static update = async req => {
-    console.log('******************************************');
-    console.log('DataController -> req.body', req.body);
+    // console.log('******************************************');
+    // console.log('DataController -> req.body', req.body);
     const dataDb = [];
     dataDb.push(req.body.id);
     dataDb.push(req.body.pitanje);

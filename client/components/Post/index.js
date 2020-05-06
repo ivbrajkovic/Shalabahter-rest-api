@@ -72,12 +72,16 @@ const Post = ({ data, admin, insertOdgovor, updateOdgovor, deleteOdgovor }) => {
   const adminClass = admin ? 'pl-2 border' : 'resize-none';
 
   return (
-    <div className='flex flex-col p-4 bg-white shadow-md sm:shadow-lg'>
+    <div
+      id='answer-container'
+      className='flex flex-col p-4 bg-white shadow-md sm:shadow-lg'
+    >
       {/* Header */}
       <div className='flex pb-1 mb-3 border-b'>
         <div className='inline-block text-lg leading-8'>{`${state.id}.`}</div>
         &nbsp;
         <input
+          id='question'
           type='text'
           readonly={!admin}
           className={`flex-1 inline-block h-8 text-lg ${adminClass}`}
@@ -101,6 +105,7 @@ const Post = ({ data, admin, insertOdgovor, updateOdgovor, deleteOdgovor }) => {
               </div>
             )}
             <Textarea
+              id='answer'
               data-key={index}
               readonly={!admin}
               className={`min-h-full flex-1 mb-2 leading-tight ${adminClass}`}

@@ -19,7 +19,7 @@ import Post from '../../components/Post';
 // Setings
 import settings from '../../settings/settings.json';
 
-import filter from '../../lib/filterFnc';
+import filter from '../../lib/filterFncNew';
 
 // Get data from service fnc
 import {

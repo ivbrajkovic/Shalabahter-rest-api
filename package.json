@@ -37,7 +37,7 @@
     "pg-promise": "^8.5.5",
     "preact": "^10.4.0",
     "preact-router": "^3.2.1",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "sweetalert2": "^9.10.10",
     "tailwindcss": "^1.2.0",
     "tailwindcss-elevation": "^0.3.4"
